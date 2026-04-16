@@ -1,18 +1,12 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "lead-generator-ai-master/streamlit_app.py",
-      "use": "@vercel/python",
+      "use": "vercel-streamlit",
       "config": {
-        "installCommand": "pip install -r lead-generator-ai-master/requirements.txt",
-        "runtime": "python3.10"
+        "requirementsPath": "lead-generator-ai-master/requirements.txt"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "lead-generator-ai-master/streamlit_app.py"
     }
   ]
 }
